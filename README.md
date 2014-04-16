@@ -35,3 +35,29 @@ Using this library:
 ```
 
 3 lines of code for **any** number of compilers to ignore warning in 1 line.
+
+### Usage (manual install)
+
+* Install `boost` (`config` library)
+* Add `Source` directory to compiler include option: `-I${LEATHERS_ROOT}/Source`
+```bash
+> cat foo.cpp
+#include <cstdio> // std::printf
+#include <boost/config.hpp>
+
+int main() {
+  const char* fmt = "%d";
+
+#include <leathers/push>
+#include <leathers/format_nonliteral>
+  std::printf(fmt, 1);
+#include <leathers/pop>
+}
+> clang++ -I${BOOST_ROOT}/include -I${LEATHERS_ROOT}/Source -Weverything foo.cpp
+```
+
+### Usage (CMake, hunter package manager)
+`Leathers` can be installed using [hunter](https://github.com/ruslo/hunter) package manager:
+```bash
+
+```
