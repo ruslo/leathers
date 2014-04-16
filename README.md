@@ -59,5 +59,31 @@ int main() {
 ### Usage (CMake, hunter package manager)
 `Leathers` can be installed using [hunter](https://github.com/ruslo/hunter) package manager:
 ```bash
+> cat CMakeLists.txt
+cmake_minimum_required(VERSION 3.0)
+project(Foo)
 
+include(HunterGate.cmake)
+hunter_add_package(Leathers)
+
+find_package(Leathers CONFIG REQUIRED)
+
+set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -Weverything -Werror")
+
+add_executable(foo foo.cpp)
+target_link_libraries(foo leathers)
+> cat foo.cpp
+#include <cstdio> // std::printf
+#include <boost/config.hpp>
+
+int main() {
+  const char* fmt = "%d";
+
+#include <leathers/push>
+#include <leathers/format_nonliteral>
+  std::printf(fmt, 1);
+#include <leathers/pop>
+}
+> cmake -H. -B_builds -DHUNTER_STATUS_DEBUG=ON
+> cmake --build _builds
 ```
