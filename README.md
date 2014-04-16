@@ -87,3 +87,9 @@ int main() {
 > cmake -H. -B_builds -DHUNTER_STATUS_DEBUG=ON
 > cmake --build _builds
 ```
+
+*Note* that boost installed automatically
+
+### Wiki
+* [warnings list](https://github.com/ruslo/leathers/wiki/List)
+* [pitfalls](https://github.com/ruslo/leathers/wiki/Pitfalls)
