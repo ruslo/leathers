@@ -1,0 +1,19 @@
+// Copyright (c) 2014, Ruslan Baratov
+// All rights reserved.
+
+#if !defined(LEATHERS_PUSH_)
+# error "`leathers/unused_macros` used " \
+      "without `leathers/push`, " \
+      "see README.txt for more info"
+#endif
+
+#if defined(LEATHERS_UNUSED_MACROS_)
+# error "`leathers/unused_macros` " \
+    "already included; see README.txt for more info"
+#else
+# define LEATHERS_UNUSED_MACROS_
+#endif
+
+#if defined(BOOST_CLANG)
+# pragma clang diagnostic ignored "-Wunused-macros"
+#endif

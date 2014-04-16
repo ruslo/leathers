@@ -1,0 +1,26 @@
+// Copyright (c) 2014, Ruslan Baratov
+// All rights reserved.
+
+#if !defined(LEATHERS_PUSH_)
+# error "`leathers/deprecated` used " \
+      "without `leathers/push`, " \
+      "see README.txt for more info"
+#endif
+
+#if defined(LEATHERS_DEPRECATED_)
+# error "`leathers/deprecated` " \
+    "already included; see README.txt for more info"
+#else
+# define LEATHERS_DEPRECATED_
+#endif
+
+#if defined(BOOST_CLANG)
+# if __has_warning("-Wdeprecated-register")
+#  pragma clang diagnostic ignored "-Wdeprecated-register"
+# endif
+# pragma clang diagnostic ignored "-Wdeprecated"
+#endif
+
+#if defined(BOOST_MSVC)
+# pragma warning(disable: 4996)
+#endif

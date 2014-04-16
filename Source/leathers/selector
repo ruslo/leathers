@@ -1,0 +1,19 @@
+// Copyright (c) 2014, Ruslan Baratov
+// All rights reserved.
+
+#if !defined(LEATHERS_PUSH_)
+# error "`leathers/selector` used " \
+      "without `leathers/push`, " \
+      "see README.txt for more info"
+#endif
+
+#if defined(LEATHERS_SELECTOR_)
+# error "`leathers/selector` " \
+    "already included; see README.txt for more info"
+#else
+# define LEATHERS_SELECTOR_
+#endif
+
+#if defined(BOOST_CLANG)
+# pragma clang diagnostic ignored "-Wselector"
+#endif

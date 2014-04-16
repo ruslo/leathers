@@ -1,0 +1,44 @@
+// Copyright (c) 2014, Ruslan Baratov
+// All rights reserved.
+
+#if !defined(LEATHERS_PUSH_)
+# error "`leathers/enum_not_handled_in_switch` used " \
+      "without `leathers/push`, " \
+      "see README.txt for more info"
+#endif
+
+#if defined(LEATHERS_ENUM_NOT_HANDLED_IN_SWITCH_)
+# error "`leathers/enum_not_handled_in_switch` " \
+    "already included; see README.txt for more info"
+#else
+# define LEATHERS_ENUM_NOT_HANDLED_IN_SWITCH_
+#endif
+
+#if defined(BOOST_CLANG)
+// '-Wswitch' reproduce:
+//
+// enum .. { A, B, C };
+// switch(...) {
+//   case A:
+//   case B:
+//   // 'case C:' and 'default:' missed
+// }
+
+// '-Wswitch-enum' reproduce:
+//
+// enum .. { A, B, C };
+// switch(...) {
+//   case A:
+//   case B:
+//   // 'case C:' missed
+//   default:
+// }
+# pragma clang diagnostic ignored "-Wswitch"
+# pragma clang diagnostic ignored "-Wswitch-enum"
+#endif
+
+#if defined(BOOST_MSVC)
+// enumerator 'xxx' in switch of enum 'xxx' is not explicitly handled by a
+// case label;
+# pragma warning(disable: 4061)
+#endif

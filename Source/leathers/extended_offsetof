@@ -1,0 +1,19 @@
+// Copyright (c) 2014, Ruslan Baratov
+// All rights reserved.
+
+#if !defined(LEATHERS_PUSH_)
+# error "`leathers/extended_offsetof` used " \
+      "without `leathers/push`, " \
+      "see README.txt for more info"
+#endif
+
+#if defined(LEATHERS_EXTENDED_OFFSETOF_)
+# error "`leathers/extended_offsetof` " \
+    "already included; see README.txt for more info"
+#else
+# define LEATHERS_EXTENDED_OFFSETOF_
+#endif
+
+#if defined(BOOST_CLANG)
+# pragma clang diagnostic ignored "-Wextended-offsetof"
+#endif

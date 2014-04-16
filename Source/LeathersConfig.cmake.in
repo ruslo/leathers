@@ -1,0 +1,5 @@
+# https://github.com/forexample/package-example
+
+@PACKAGE_INIT@
+
+include("@PACKAGE_CONF_DEST@/LeathersTargets.cmake")
