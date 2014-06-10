@@ -93,3 +93,8 @@ int main() {
 ### Wiki
 * [warnings list](https://github.com/ruslo/leathers/wiki/List)
 * [pitfalls](https://github.com/ruslo/leathers/wiki/Pitfalls)
+
+### Related
+* CMake function to generate warning-control flags for compiler: [sugar_generate_warnings_flags][1]
+
+[1]: https://github.com/ruslo/sugar/wiki/Cross-platform-warning-suppression
