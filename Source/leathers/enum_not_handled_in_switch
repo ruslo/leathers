@@ -41,4 +41,7 @@
 // enumerator 'xxx' in switch of enum 'xxx' is not explicitly handled by a
 // case label;
 # pragma warning(disable: 4061)
+
+// enumerator 'xxx' in switch of enum 'xxx' is not handled
+# pragma warning(disable: 4062)
 #endif
