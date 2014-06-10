@@ -19,3 +19,7 @@
 *.exe
 *.out
 *.app
+
+# Temp build/install
+_builds
+_install
