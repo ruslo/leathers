@@ -13,5 +13,5 @@ include(sugar_files)
 
 sugar_files(
     LEATHERS_EXAMPLES_SOURCES
-    over_aligned.cpp
+    padded.cpp
 )

@@ -33,6 +33,7 @@ sugar_files(
     missing_prototypes
     missing_variable_declarations
     over_aligned
+    padded
     pedantic
     selector
     sign_conversion
