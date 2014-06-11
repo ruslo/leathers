@@ -40,7 +40,7 @@ target_include_directories(
 
 target_include_directories(leathers SYSTEM INTERFACE "${Boost_INCLUDE_DIR}")
 
-sugar_generate_warning_flags(flags ENABLE ALL TREAT_AS_ERROR ALL CLEAR_GLOBAL)
+sugar_generate_warning_flags(flags ENABLE ALL CLEAR_GLOBAL)
 
 if(LEATHERS_BUILD_EXAMPLES)
   foreach(src ${LEATHERS_EXAMPLES_SOURCES})
