@@ -6,6 +6,11 @@ project(Leathers)
 
 ### Build Options ###
 option(LEATHERS_BUILD_EXAMPLES "Build examples" OFF)
+option(
+    LEATHERS_EXAMPLES_SHOW_WARNINGS
+    "Disable warning suppression in examples"
+    OFF
+)
 
 ### Download dependencies ###
 include(HunterGate.cmake)
@@ -47,6 +52,9 @@ if(LEATHERS_BUILD_EXAMPLES)
     get_filename_component(test_name "${src}" NAME_WE)
     set(sources ${src} ${LEATHERS_SOURCES} ${SUGAR_SOURCES})
     add_executable(example_${test_name} ${sources})
+    if(LEATHERS_EXAMPLES_SHOW_WARNINGS)
+      target_compile_definitions(example_${test_name} SHOW_WARNINGS)
+    endif()
     sugar_groups_generate(${sources})
     target_compile_options(example_${test_name} PUBLIC ${flags})
     target_link_libraries(example_${test_name} leathers)
