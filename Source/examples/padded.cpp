@@ -3,7 +3,9 @@
 struct Foo {
   char x;
 #include <leathers/push>
-#include <leathers/padded>
+#if !defined(SHOW_WARNINGS)
+# include <leathers/padded>
+#endif
   long y;
 #include <leathers/pop>
 };
