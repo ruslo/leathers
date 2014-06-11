@@ -10,7 +10,8 @@ option(LEATHERS_BUILD_EXAMPLES "Build examples" OFF)
 ### Download dependencies ###
 include(HunterGate.cmake)
 hunter_add_package(Boost)
-hunter_add_package(Sugar)
+
+include("./sugar/cmake/Sugar") # TODO temporary
 
 ### Find dependencies ###
 find_package(Boost REQUIRED)
