@@ -18,6 +18,7 @@ install:
     - cmake -HCMake-${CMAKE_VERSION} -B_builds-cmake -DCMAKE_USE_SYSTEM_CURL=YES -DCMAKE_BUILD_TYPE=Release
     - cmake --build _builds-cmake
     - sudo cmake --build _builds-cmake --target install
+    - sudo chmod 755 /usr/local/share/cmake-3.0/
     # -- end
     # verify installed cmake
     - which cmake
