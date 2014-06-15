@@ -15,13 +15,13 @@ option(
 ### Download dependencies ###
 include(HunterGate.cmake)
 hunter_add_package(Boost)
-
-include("./sugar/cmake/Sugar") # TODO temporary
+hunter_add_package(Sugar)
 
 ### Find dependencies ###
 find_package(Boost REQUIRED)
 
 ### - ###
+include("${SUGAR_ROOT}/cmake/Sugar")
 include(sugar_generate_warning_flags)
 include(sugar_groups_generate)
 include(sugar_include)
@@ -45,7 +45,12 @@ target_include_directories(
 
 target_include_directories(leathers SYSTEM INTERFACE "${Boost_INCLUDE_DIR}")
 
-sugar_generate_warning_flags(flags ENABLE ALL CLEAR_GLOBAL)
+sugar_generate_warning_flags(
+    target_compile_options
+    target_properties
+    ENABLE ALL
+    TREAT_AS_ERRORS ALL
+)
 
 if(LEATHERS_BUILD_EXAMPLES)
   foreach(src ${LEATHERS_EXAMPLES_SOURCES})
@@ -56,7 +61,13 @@ if(LEATHERS_BUILD_EXAMPLES)
       target_compile_definitions(example_${test_name} PUBLIC SHOW_WARNINGS)
     endif()
     sugar_groups_generate(${sources})
-    target_compile_options(example_${test_name} PUBLIC ${flags})
+    set_target_properties(
+        example_${test_name}
+        PROPERTIES
+        ${target_properties}
+        COMPILE_OPTIONS
+        "${target_compile_options}"
+    )
     target_link_libraries(example_${test_name} leathers)
   endforeach()
 endif()
