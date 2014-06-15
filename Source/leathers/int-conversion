@@ -5,26 +5,26 @@
 // All rights reserved.
 
 #if !defined(LEATHERS_PUSH_)
-# error "`leathers/padded` used "
+# error "`leathers/int-conversion` used "
       "without `leathers/push`, "
       "see README.txt for more info"
 #endif
 
-#if defined(LEATHERS_PADDED_)
-# error "`leathers/padded` "
+#if defined(LEATHERS_INT_CONVERSION_)
+# error "`leathers/int-conversion` "
     "already included; see README.txt for more info"
 #else
-# define LEATHERS_PADDED_
+# define LEATHERS_INT_CONVERSION_
 #endif
 
 #if defined(BOOST_COMP_CLANG)
-# if __has_warning("-Wpadded")
-#  pragma clang diagnostic ignored "-Wpadded"
+# if __has_warning("-Wint-conversion")
+#  pragma clang diagnostic ignored "-Wint-conversion"
 # endif
 #endif
 
 #if defined(BOOST_COMP_GNUC)
-# if __has_warning("-Wpadded")
-#  pragma clang diagnostic ignored "-Wpadded"
+# if __has_warning("-Wint-conversion")
+#  pragma clang diagnostic ignored "-Wint-conversion"
 # endif
 #endif

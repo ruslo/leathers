@@ -1,34 +1,27 @@
+// This file generated automatically:
+// https://github.com/ruslo/sugar/wiki/Cross-platform-warning-suppression
+
 // Copyright (c) 2014, Ruslan Baratov
 // All rights reserved.
 
-// do not include files here, because this header may
-// be used inside namespaces:
-//
-// namespace A {
-// namespace B {
-// #include <.../push>
-// ... code ...
-// #include <.../pop>
-// ... code ...
-// } // namespace B
-// } // namespace A
-
-// checking boost include guards (for BOOST_CLANG, BOOST_MSVC, ...)
-#if !defined(BOOST_CONFIG_HPP)
-# error "Please include 'boost/config.hpp'"
-#endif
+#include <boost/predef/compiler.h>
 
 #if defined(LEATHERS_PUSH_)
 # error "Not ending 'leathers/push' include detected;"
-    "every 'push' must ends with 'pop'; see README.txt for more info"
+    "every 'push' must ends with 'pop'; "
+    "see `https://github.com/ruslo/leathers/wiki/Pitfalls` for more info"
 #else
 # define LEATHERS_PUSH_
 #endif
 
-#if defined(BOOST_CLANG)
+#if (BOOST_COMP_CLANG)
 # pragma clang diagnostic push
 #endif
 
-#if defined(BOOST_MSVC)
+#if (BOOST_COMP_GNUC)
+# pragma clang diagnostic push
+#endif
+
+#if (BOOST_COMP_MSVC)
 # pragma warning(push)
 #endif

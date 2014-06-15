@@ -1,20 +1,30 @@
+// This file generated automatically:
+// https://github.com/ruslo/sugar/wiki/Cross-platform-warning-suppression
+
 // Copyright (c) 2014, Ruslan Baratov
 // All rights reserved.
 
 #if !defined(LEATHERS_PUSH_)
-# error "`leathers/conversion` used " \
-      "without `leathers/push`, " \
+# error "`leathers/conversion` used "
+      "without `leathers/push`, "
       "see README.txt for more info"
 #endif
 
 #if defined(LEATHERS_CONVERSION_)
-# error "`leathers/conversion` " \
+# error "`leathers/conversion` "
     "already included; see README.txt for more info"
 #else
 # define LEATHERS_CONVERSION_
 #endif
 
-#if defined(BOOST_CLANG)
-# pragma clang diagnostic ignored "-Wconversion"
-# pragma clang diagnostic ignored "-Wshorten-64-to-32"
+#if defined(BOOST_COMP_CLANG)
+# if __has_warning("-Wconversion")
+#  pragma clang diagnostic ignored "-Wconversion"
+# endif
+#endif
+
+#if defined(BOOST_COMP_GNUC)
+# if __has_warning("-Wconversion")
+#  pragma clang diagnostic ignored "-Wconversion"
+# endif
 #endif
