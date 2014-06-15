@@ -1,0 +1,55 @@
+leathers/Source/examples/c++98-compat.cpp:8:3: warning: inline namespaces are incompatible with C++98 [-Wc++98-compat]
+1 warning generated.
+leathers/Source/examples/c++98-compat-pedantic.cpp:11:2: warning: extra ';' outside of a function is incompatible with C++98 [-Wc++98-compat-pedantic]
+1 warning generated.
+leathers/Source/examples/cast-aligned.cpp:11:13: warning: use of old-style cast [-Wold-style-cast]
+leathers/Source/examples/cast-aligned.cpp:11:13: warning: cast from 'char *' to 'long *' increases required alignment from 1 to 8 [-Wcast-align]
+2 warnings generated.
+leathers/Source/examples/conditional-uninitialized.cpp:16:10: warning: variable 'result' may be uninitialized when used here [-Wconditional-uninitialized]
+leathers/Source/examples/conditional-uninitialized.cpp:9:13: note: initialize the variable 'result' to silence this warning
+1 warning generated.
+leathers/Source/examples/conversion.cpp:15:5: warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wconversion]
+1 warning generated.
+leathers/Source/examples/covered-switch-default.cpp:25:5: warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
+leathers/Source/examples/covered-switch-default.cpp:26:7: warning: will never be executed [-Wunreachable-code]
+2 warnings generated.
+leathers/Source/examples/deprecated.cpp:9:14: warning: dynamic exception specifications are deprecated [-Wdeprecated]
+1 warning generated.
+leathers/Source/examples/deprecated-declarations.cpp:14:3: warning: 'foo' is deprecated: boo [-Wdeprecated-declarations]
+1 warning generated.
+leathers/Source/examples/deprecated-register.cpp:9:3: warning: 'register' storage class specifier is deprecated [-Wdeprecated-register]
+1 warning generated.
+leathers/Source/examples/documentation.cpp:9:5: warning: unknown command tag name 'detail'; did you mean 'details'? [-Wdocumentation]
+1 warning generated.
+leathers/Source/examples/documentation-unknown-command.cpp:8:5: warning: unknown command tag name [-Wdocumentation-unknown-command]
+1 warning generated.
+leathers/Source/examples/extra-semi.cpp:10:4: warning: extra ';' after member function definition [-Wextra-semi]
+1 warning generated.
+leathers/Source/examples/global-constructors.cpp:15:5: warning: declaration requires a global constructor [-Wglobal-constructors]
+1 warning generated.
+leathers/Source/examples/missing-noreturn.cpp:10:12: warning: function 'foo' could be declared with attribute 'noreturn' [-Wmissing-noreturn]
+1 warning generated.
+leathers/Source/examples/non-virtual-dtor.cpp:8:8: warning: 'Foo' has virtual functions but non-virtual destructor [-Wnon-virtual-dtor]
+1 warning generated.
+leathers/Source/examples/old-style-cast.cpp:11:13: warning: use of old-style cast [-Wold-style-cast]
+1 warning generated.
+leathers/Source/examples/padded.cpp:10:8: warning: padding struct 'Foo' with 7 bytes to align 'y' [-Wpadded]
+1 warning generated.
+leathers/Source/examples/shift-sign-overflow.cpp:9:32: warning: signed shift result (0x8000000000000000) sets the sign bit of the shift expression's type ('long') and becomes negative [-Wshift-sign-overflow]
+1 warning generated.
+leathers/Source/examples/sign-compare.cpp:11:9: warning: comparison of integers of different signs: 'int' and 'unsigned int' [-Wsign-compare]
+1 warning generated.
+leathers/Source/examples/switch.cpp:16:11: warning: enumeration value 'B' not handled in switch [-Wswitch]
+1 warning generated.
+leathers/Source/examples/switch-enum.cpp:16:11: warning: enumeration value 'B' not explicitly handled in switch [-Wswitch-enum]
+1 warning generated.
+leathers/Source/examples/undef.cpp:8:6: warning: 'VERY_STRANGE_MACRO' is not defined, evaluates to 0 [-Wundef]
+1 warning generated.
+leathers/Source/examples/unreachable-code.cpp:12:10: warning: will never be executed [-Wunreachable-code]
+1 warning generated.
+leathers/Source/examples/unused-parameter.cpp:10:14: warning: unused parameter 'a' [-Wunused-parameter]
+1 warning generated.
+leathers/Source/examples/used-but-marked-unused.cpp:20:3: warning: 'Foo' was marked unused but was used [-Wused-but-marked-unused]
+1 warning generated.
+leathers/Source/examples/weak-vtables.cpp:8:7: warning: 'Foo' has no out-of-line virtual method definitions; its vtable will be emitted in every translation unit [-Wweak-vtables]
+1 warning generated.
