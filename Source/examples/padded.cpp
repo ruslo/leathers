@@ -1,4 +1,5 @@
-#include <boost/config.hpp>
+// Copyright (c) 2014, Ruslan Baratov
+// All rights reserved.
 
 struct Foo {
   char x;
