@@ -49,7 +49,7 @@ sugar_generate_warning_flags(
     target_compile_options
     target_properties
     ENABLE ALL
-    TREAT_AS_ERRORS ALL
+    TREAT_AS_ERROR ALL
 )
 
 if(LEATHERS_BUILD_EXAMPLES)
