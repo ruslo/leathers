@@ -1,2 +1,0 @@
-leathers/Source/examples/padded.cpp:9:8: warning: padding struct 'Foo' with 7 bytes to align 'y' [-Wpadded]
-1 warning generated.
