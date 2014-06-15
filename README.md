@@ -29,7 +29,7 @@ Using this library:
 
 ```cpp
 #include <leathers/push>
-#include <leathers/exit_time_destructors>
+#include <leathers/exit-time-destructors>
 // some code
 #include <leathers/pop>
 ```
@@ -38,18 +38,17 @@ Using this library:
 
 ### Usage (manual install)
 
-* Install `boost` (`config` library)
+* Install `boost` (`predef` library)
 * Add `Source` directory to compiler include option: `-I${LEATHERS_ROOT}/Source`
 ```bash
 > cat foo.cpp
 #include <cstdio> // std::printf
-#include <boost/config.hpp>
 
 int main() {
   const char* fmt = "%d";
 
 #include <leathers/push>
-#include <leathers/format_nonliteral>
+#include <leathers/format>
   std::printf(fmt, 1);
 #include <leathers/pop>
 }
@@ -74,13 +73,12 @@ add_executable(foo foo.cpp)
 target_link_libraries(foo leathers)
 > cat foo.cpp
 #include <cstdio> // std::printf
-#include <boost/config.hpp>
 
 int main() {
   const char* fmt = "%d";
 
 #include <leathers/push>
-#include <leathers/format_nonliteral>
+#include <leathers/format>
   std::printf(fmt, 1);
 #include <leathers/pop>
 }
@@ -90,11 +88,49 @@ int main() {
 
 *Note* that boost installed automatically
 
+### CMake (companion function to generate warning flags)
+[This][2] function can be used to generate cross-platform target flags and properties:
+```bash
+> cat CMakeLists.txt
+cmake_minimum_required(VERSION 3.0)
+project(Foo)
+
+include(HunterGate.cmake)
+hunter_add_package(Leathers)
+hunter_add_package(Sugar)
+
+find_package(Leathers CONFIG REQUIRED)
+include(${SUGAR_ROOT}/cmake/Sugar)
+include(sugar_generate_warning_flags)
+
+sugar_generate_warning_flags(
+    flags properties ENABLE ALL TREAT_AS_ERROR ALL CLEAR_GLOBAL
+)
+
+add_executable(foo foo.cpp)
+target_link_libraries(foo leathers)
+
+set_target_properties(
+    foo PROPERTIES ${properties} COMPILE_OPTIONS "${flags}"
+)
+> cat foo.cpp
+#include <cstdio> // std::printf
+
+int main() {
+  const char* fmt = "%d";
+
+#include <leathers/push>
+#include <leathers/format>
+  std::printf(fmt, 1);
+#include <leathers/pop>
+}
+> cmake -H. -B_builds -DHUNTER_STATUS_DEBUG=ON
+> cmake --build _builds
+```
+
 ### Wiki
 * [warnings list](https://github.com/ruslo/leathers/wiki/List)
 * [pitfalls](https://github.com/ruslo/leathers/wiki/Pitfalls)
 
-### Related
-* CMake function to generate warning-control flags for compiler: [sugar_generate_warnings_flags][1]
-
 [1]: https://github.com/ruslo/sugar/wiki/Cross-platform-warning-suppression
+[2]: https://github.com/ruslo/sugar/tree/master/cmake/core#sugar_generate_warning_flags
