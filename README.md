@@ -36,6 +36,18 @@ Using this library:
 
 3 lines of code for **any** number of compilers to ignore warning in 1 line.
 
+### Example (all)
+
+Suppressing warnings in third party libraries:
+
+```cpp
+#include <leathers/push>
+#include <leathers/all>
+# include <third_party/library1/headerA>
+# include <third_party/library2/headerB>
+#include <leathers/pop>
+```
+
 ### Usage (manual install)
 
 * Install `boost` (`predef` library)
