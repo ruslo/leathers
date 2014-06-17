@@ -24,3 +24,6 @@
 _builds
 _install
 run-local.py
+
+# mac osx
+.DS_Store
