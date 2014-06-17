@@ -25,7 +25,7 @@
 #include <leathers/constant-conditional>
 #include <leathers/constant-conversion>
 #include <leathers/conversion>
-#include <leathers/conversion-loss-return>
+#include <leathers/conversion-loss>
 #include <leathers/covered-switch-default>
 #include <leathers/deprecated>
 #include <leathers/deprecated-declarations>
@@ -78,7 +78,6 @@
 #include <leathers/uninitialized>
 #include <leathers/unknown-pragmas>
 #include <leathers/unreachable-code>
-#include <leathers/unreachable-code-simple>
 #include <leathers/unsafe-conversion>
 #include <leathers/unused-function>
 #include <leathers/unused-label>

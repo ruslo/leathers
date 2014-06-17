@@ -3,7 +3,7 @@
 
 #include <leathers/push>
 #if !defined(SHOW_WARNINGS)
-# include <leathers/unreachable-code-simple>
+# include <leathers/unreachable-code>
 #endif
 int main() {
   return 2;

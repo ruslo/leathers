@@ -41,7 +41,7 @@ sugar_files(
     constant-conditional
     constant-conversion
     conversion
-    conversion-loss-return
+    conversion-loss
     covered-switch-default
     deprecated
     deprecated-declarations
@@ -94,7 +94,6 @@ sugar_files(
     uninitialized
     unknown-pragmas
     unreachable-code
-    unreachable-code-simple
     unsafe-conversion
     unused-function
     unused-label

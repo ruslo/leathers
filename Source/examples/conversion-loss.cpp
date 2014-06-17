@@ -9,9 +9,8 @@ int main() {
   char y;
 
 #include <leathers/push>
-#include <leathers/conversion-loss>
 #if !defined(SHOW_WARNINGS)
-# include <leathers/conversion-loss-return>
+# include <leathers/conversion-loss>
 #endif
   y = foo();
 #include <leathers/pop>

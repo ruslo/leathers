@@ -34,7 +34,7 @@ sugar_files(
     catch-semantic-changed.cpp
     conditional-uninitialized.cpp
     constant-conditional.cpp
-    conversion-loss-return.cpp
+    conversion-loss.cpp
     conversion.cpp
     covered-switch-default.cpp
     deprecated-declarations.cpp
@@ -64,7 +64,6 @@ sugar_files(
     switch.cpp
     this-used-in-init.cpp
     undef.cpp
-    unreachable-code-simple.cpp
     unreachable-code.cpp
     unsafe-conversion.cpp
     unused-parameter.cpp
