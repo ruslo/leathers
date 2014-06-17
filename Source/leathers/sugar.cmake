@@ -22,102 +22,101 @@ sugar_files(
     ###
     c++98-compat
     c++98-compat-pedantic
+    assign-base-inaccessible
+    assign-could-not-be-generated
+    copy-ctor-could-not-be-generated
+    dflt-ctor-base-inaccessible
+    dflt-ctor-could-not-be-generated
+    user-ctor-required
+    automatic-inline
+    force-not-inlined
+    not-inlined
+    unreferenced-inline
+    behavior-change
+    bool-conversion
+    c++11-extensions
     cast-align
+    catch-semantic-changed
     conditional-uninitialized
+    constant-conditional
+    constant-conversion
     conversion
+    conversion-loss
+    conversion-loss-return
     covered-switch-default
     deprecated
     deprecated-declarations
     deprecated-objc-isa-usage
     deprecated-register
+    digraphs-not-supported
     disabled-macro-expansion
     documentation
     documentation-unknown-command
     empty-body
+    enum-conversion
+    exit-time-destructors
     extra-semi
-    global-constructors
-    implicit-fallthrough
+    format
     four-char-constants
+    global-constructors
+    ill-formed-comma-expr
+    implicit-fallthrough
+    inherits-via-dominance
+    int-conversion
+    invalid-offsetof
+    is-defined-to-be
+    layout-changed
+    missing-braces
+    missing-field-initializers
     missing-noreturn
+    missing-prototypes
+    name-length-exceeded
+    newline-eof
+    no-such-warning
     non-virtual-dtor
+    object-layout-change
     old-style-cast
+    overloaded-virtual
     padded
+    parentheses
+    pointer-sign
+    return-type
+    shadow
     shift-sign-overflow
+    shorten-64-to-32
     sign-compare
+    sign-conversion
+    signed-unsigned-compare
+    signed-unsigned-mismatch
+    static-ctor-not-thread-safe
     switch
     switch-enum
+    this-used-in-init
     undef
-    unreachable-code
-    unused-parameter
-    used-but-marked-unused
-    weak-vtables
-    shadow
-    bool-conversion
-    constant-conversion
-    shorten-64-to-32
-    enum-conversion
-    int-conversion
-    sign-conversion
-    missing-braces
-    return-type
-    parentheses
-    missing-field-initializers
-    missing-prototypes
-    newline-eof
-    pointer-sign
-    format
     uninitialized
     unknown-pragmas
+    unreachable-code
+    unreachable-code-simple
+    unsafe-conversion
     unused-function
     unused-label
+    unused-parameter
     unused-value
     unused-variable
-    exit-time-destructors
-    overloaded-virtual
-    invalid-offsetof
-    c++11-extensions
-    duplicate-method-match
-    implicit-atomic-properties
-    objc-missing-property-synthesis
-    protocol
-    selector
+    used-but-marked-unused
+    weak-vtables
+    arc-bridge-casts-disallowed-in-nonarc
+    arc-repeated-use-of-weak
     deprecated-implementations
+    duplicate-method-match
+    explicit-ownership-type
+    implicit-atomic-properties
+    implicit-retain-self
+    objc-missing-property-synthesis
+    objc-root-class
+    protocol
+    receiver-is-weak
+    selector
     strict-selector-match
     undeclared-selector
-    objc-root-class
-    explicit-ownership-type
-    implicit-retain-self
-    arc-repeated-use-of-weak
-    receiver-is-weak
-    arc-bridge-casts-disallowed-in-nonarc
-    unreferenced-inline
-    constant-conditional
-    automatic-inline
-    copy-ctor-could-not-be-generated
-    catch-semantic-changed
-    assign-could-not-be-generated
-    assign-base-inaccessible
-    no-such-warning
-    dflt-ctor-could-not-be-generated
-    dflt-ctor-base-inaccessible
-    user-ctor-required
-    behavior-change
-    static-ctor-not-thread-safe
-    is-defined-to-be
-    ill-formed-comma-expr
-    conversion-loss
-    conversion-loss-return
-    this-used-in-init
-    unsafe-conversion
-    object-layout-change
-    digraphs-not-supported
-    expression-has-no-effect
-    unreachable-code-simple
-    inherits-via-dominance
-    signed-unsigned-mismatch
-    signed-unsigned-compare
-    name-length-exceeded
-    not-inlined
-    layout-changed
-    force-not-inlined
 )
