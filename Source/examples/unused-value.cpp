@@ -5,7 +5,7 @@ int main() {
   int x(0);
 #include <leathers/push>
 #if !defined(SHOW_WARNINGS)
-# include <leathers/expression-has-no-effect>
+# include <leathers/unused-value>
 #endif
   x;
 #include <leathers/pop>

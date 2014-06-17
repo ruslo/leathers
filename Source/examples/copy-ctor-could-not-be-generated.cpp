@@ -3,8 +3,11 @@
 
 class Foo {
  public:
+#include <leathers/push>
+#include <leathers/c++98-compat>
   Foo() = default;
   Foo(const Foo&) = delete;
+#include <leathers/pop>
 };
 
 #include <leathers/push>

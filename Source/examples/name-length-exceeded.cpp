@@ -8,6 +8,7 @@
 #include <leathers/pop>
 
 #include <leathers/push>
+#include <leathers/c++98-compat>
 #if !defined(SHOW_WARNINGS)
 # include <leathers/name-length-exceeded>
 #endif

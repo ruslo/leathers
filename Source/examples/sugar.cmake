@@ -20,7 +20,6 @@ sugar_files(
     assign-base-inaccessible.cpp
     assign-could-not-be-generated.cpp
     copy-ctor-could-not-be-generated.cpp
-    dflt-ctor-base-inaccessible.cpp
     dflt-ctor-could-not-be-generated.cpp
     user-ctor-required.cpp
 
@@ -31,7 +30,6 @@ sugar_files(
     unreferenced-inline.cpp
 
     #
-    behavior-change.cpp
     cast-aligned.cpp
     catch-semantic-changed.cpp
     conditional-uninitialized.cpp
@@ -43,10 +41,8 @@ sugar_files(
     deprecated-declarations.cpp
     deprecated-register.cpp
     deprecated.cpp
-    digraphs-not-supported.cpp
     documentation-unknown-command.cpp
     documentation.cpp
-    expression-has-no-effect.cpp
     extra-semi.cpp
     global-constructors.cpp
     ill-formed-comma-expr.cpp
@@ -73,6 +69,7 @@ sugar_files(
     unreachable-code.cpp
     unsafe-conversion.cpp
     unused-parameter.cpp
+    unused-value.cpp
     used-but-marked-unused.cpp
     weak-vtables.cpp
 )
@@ -81,5 +78,14 @@ if(NOT MSVC)
   sugar_files(
     LEATHERS_EXAMPLES_SOURCES
     c++98-compat.cpp # inline namespaces is not supported
+  )
+endif()
+
+if(MSVC)
+  sugar_files(
+    LEATHERS_EXAMPLES_SOURCES
+    behavior-change.cpp
+    dflt-ctor-base-inaccessible.cpp # clang error
+    digraphs-not-supported.cpp # clang error
   )
 endif()

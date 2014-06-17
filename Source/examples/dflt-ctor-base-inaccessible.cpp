@@ -3,7 +3,10 @@
 
 class Foo {
  public:
+#include <leathers/push>
+#include <leathers/c++98-compat>
   Foo() = delete;
+#include <leathers/pop>
 };
 
 #include <leathers/push>
