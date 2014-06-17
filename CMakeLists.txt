@@ -48,8 +48,14 @@ target_include_directories(leathers SYSTEM INTERFACE "${Boost_INCLUDE_DIR}")
 sugar_generate_warning_flags(
     target_compile_options
     target_properties
+    DISABLE
+    unreferenced-inline # https://github.com/ruslo/leathers/issues/1
+    name-length-exceeded # https://github.com/ruslo/leathers/issues/2
+    not-inlined # https://github.com/ruslo/leathers/issues/3
+    force-not-inlined # https://github.com/ruslo/leathers/issues/4
     ENABLE ALL
     TREAT_AS_ERROR ALL
+    CLEAR_GLOBAL
 )
 
 if(LEATHERS_BUILD_EXAMPLES)
@@ -60,7 +66,6 @@ if(LEATHERS_BUILD_EXAMPLES)
     if(LEATHERS_EXAMPLES_SHOW_WARNINGS)
       target_compile_definitions(example_${test_name} PUBLIC SHOW_WARNINGS)
     endif()
-    sugar_groups_generate(${sources})
     set_target_properties(
         example_${test_name}
         PROPERTIES
@@ -71,6 +76,10 @@ if(LEATHERS_BUILD_EXAMPLES)
     target_link_libraries(example_${test_name} leathers)
   endforeach()
 endif()
+
+sugar_groups_generate(
+    ${LEATHERS_EXAMPLES_SOURCES} ${LEATHERS_SOURCES} ${SUGAR_SOURCES}
+)
 
 ### Install ###
 set(CONF_DEST "lib/cmake/Leathers")
