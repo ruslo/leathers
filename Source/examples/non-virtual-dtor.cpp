@@ -7,6 +7,7 @@
 #endif
 struct Foo {
   virtual void foo() = 0;
+  ~Foo() {} // For Visual Studio warning
 };
 #include <leathers/pop>
 

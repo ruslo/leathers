@@ -3,8 +3,11 @@
 
 void f(int);
 
+#include <leathers/push>
+#include <leathers/automatic-inline>
 void f(int) {
 }
+#include <leathers/pop>
 
 int main() {
   double x = 1.5;

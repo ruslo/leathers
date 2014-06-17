@@ -2,9 +2,13 @@
 // All rights reserved.
 
 int main() {
+#include <leathers/push>
+#include <leathers/constant-conditional>
   if (true) {
     return 1;
   }
+#include <leathers/pop>
+
 #include <leathers/push>
 #if !defined(SHOW_WARNINGS)
 # include <leathers/unreachable-code>
