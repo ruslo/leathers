@@ -25,7 +25,6 @@
 #include <leathers/constant-conditional>
 #include <leathers/constant-conversion>
 #include <leathers/conversion>
-#include <leathers/conversion-loss>
 #include <leathers/conversion-loss-return>
 #include <leathers/covered-switch-default>
 #include <leathers/deprecated>
@@ -71,7 +70,6 @@
 #include <leathers/sign-compare>
 #include <leathers/sign-conversion>
 #include <leathers/signed-unsigned-compare>
-#include <leathers/signed-unsigned-mismatch>
 #include <leathers/static-ctor-not-thread-safe>
 #include <leathers/switch>
 #include <leathers/switch-enum>

@@ -41,7 +41,6 @@ sugar_files(
     constant-conditional
     constant-conversion
     conversion
-    conversion-loss
     conversion-loss-return
     covered-switch-default
     deprecated
@@ -87,7 +86,6 @@ sugar_files(
     sign-compare
     sign-conversion
     signed-unsigned-compare
-    signed-unsigned-mismatch
     static-ctor-not-thread-safe
     switch
     switch-enum
