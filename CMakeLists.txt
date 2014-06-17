@@ -45,6 +45,12 @@ target_include_directories(
 
 target_include_directories(leathers SYSTEM INTERFACE "${Boost_INCLUDE_DIR}")
 
+if(LEATHERS_EXAMPLES_SHOW_WARNINGS)
+  set(treat_as_error "")
+else()
+  set(treat_as_error ALL)
+endif()
+
 sugar_generate_warning_flags(
     target_compile_options
     target_properties
@@ -54,7 +60,7 @@ sugar_generate_warning_flags(
     not-inlined # https://github.com/ruslo/leathers/issues/3
     force-not-inlined # https://github.com/ruslo/leathers/issues/4
     ENABLE ALL
-    TREAT_AS_ERROR ALL
+    TREAT_AS_ERROR ${treat_as_error}
     CLEAR_GLOBAL
 )
 
