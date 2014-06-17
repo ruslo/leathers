@@ -35,7 +35,6 @@ sugar_files(
     conditional-uninitialized.cpp
     constant-conditional.cpp
     conversion-loss-return.cpp
-    conversion-loss.cpp
     conversion.cpp
     covered-switch-default.cpp
     deprecated-declarations.cpp

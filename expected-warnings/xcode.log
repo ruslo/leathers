@@ -2,7 +2,6 @@
 /Source/examples/c++98-compat.cpp:8:3: warning: inline namespaces are incompatible with C++98 [-Wc++98-compat]
 /Source/examples/cast-aligned.cpp:11:13: warning: cast from 'char *' to 'long *' increases required alignment from 1 to 8 [-Wcast-align]
 /Source/examples/conditional-uninitialized.cpp:16:10: warning: variable 'result' may be uninitialized when used here [-Wconditional-uninitialized]
-/Source/examples/conversion-loss.cpp:12:7: warning: implicit conversion loses integer precision: 'long' to 'short' [-Wconversion]
 /Source/examples/conversion.cpp:18:5: warning: implicit conversion turns floating-point number into integer: 'double' to 'int' [-Wconversion]
 /Source/examples/covered-switch-default.cpp:25:5: warning: default label in switch which covers all enumeration values [-Wcovered-switch-default]
 /Source/examples/covered-switch-default.cpp:26:7: warning: will never be executed [-Wunreachable-code]
