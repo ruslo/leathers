@@ -5,7 +5,7 @@ int foo();
 
 #include <leathers/push>
 #if !defined(SHOW_WARNINGS)
-# include <leathers/signed-unsigned-mismatch>
+# include <leathers/sign-conversion>
 #endif
 int foo() {
   unsigned x(3);

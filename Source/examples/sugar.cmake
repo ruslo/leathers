@@ -58,7 +58,7 @@ sugar_files(
     shift-sign-overflow.cpp
     sign-compare.cpp
     signed-unsigned-compare.cpp
-    signed-unsigned-mismatch.cpp
+    sign-conversion.cpp
     static-ctor-not-thread-safe.cpp
     switch-enum.cpp
     switch.cpp
