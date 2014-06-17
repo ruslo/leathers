@@ -90,4 +90,34 @@ sugar_files(
     arc-repeated-use-of-weak
     receiver-is-weak
     arc-bridge-casts-disallowed-in-nonarc
+    unreferenced-inline
+    constant-conditional
+    automatic-inline
+    copy-ctor-could-not-be-generated
+    catch-semantic-changed
+    assign-could-not-be-generated
+    assign-base-inaccessible
+    no-such-warning
+    dflt-ctor-could-not-be-generated
+    dflt-ctor-base-inaccessible
+    user-ctor-required
+    behavior-change
+    static-ctor-not-thread-safe
+    is-defined-to-be
+    ill-formed-comma-expr
+    conversion-loss
+    conversion-loss-return
+    this-used-in-init
+    unsafe-conversion
+    object-layout-change
+    digraphs-not-supported
+    expression-has-no-effect
+    unreachable-code-simple
+    inherits-via-dominance
+    signed-unsigned-mismatch
+    signed-unsigned-compare
+    name-length-exceeded
+    not-inlined
+    layout-changed
+    force-not-inlined
 )
