@@ -17,13 +17,13 @@
 # define LEATHERS_CONSTANT_CONVERSION_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wconstant-conversion")
 #  pragma clang diagnostic ignored "-Wconstant-conversion"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wconstant-conversion")
 #  pragma clang diagnostic ignored "-Wconstant-conversion"
 # endif

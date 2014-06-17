@@ -17,13 +17,13 @@
 # define LEATHERS_IMPLICIT_FALLTHROUGH_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wimplicit-fallthrough")
 #  pragma clang diagnostic ignored "-Wimplicit-fallthrough"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wimplicit-fallthrough")
 #  pragma clang diagnostic ignored "-Wimplicit-fallthrough"
 # endif

@@ -17,13 +17,13 @@
 # define LEATHERS_UNREACHABLE_CODE_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wunreachable-code")
 #  pragma clang diagnostic ignored "-Wunreachable-code"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wunreachable-code")
 #  pragma clang diagnostic ignored "-Wunreachable-code"
 # endif

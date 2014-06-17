@@ -17,13 +17,13 @@
 # define LEATHERS_BOOL_CONVERSION_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wbool-conversion")
 #  pragma clang diagnostic ignored "-Wbool-conversion"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wbool-conversion")
 #  pragma clang diagnostic ignored "-Wbool-conversion"
 # endif

@@ -17,13 +17,13 @@
 # define LEATHERS_CXX98_COMPAT_PEDANTIC_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wc++98-compat-pedantic")
 #  pragma clang diagnostic ignored "-Wc++98-compat-pedantic"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wc++98-compat-pedantic")
 #  pragma clang diagnostic ignored "-Wc++98-compat-pedantic"
 # endif

@@ -17,13 +17,13 @@
 # define LEATHERS_STRICT_SELECTOR_MATCH_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wstrict-selector-match")
 #  pragma clang diagnostic ignored "-Wstrict-selector-match"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wstrict-selector-match")
 #  pragma clang diagnostic ignored "-Wstrict-selector-match"
 # endif

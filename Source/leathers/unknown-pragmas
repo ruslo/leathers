@@ -17,13 +17,13 @@
 # define LEATHERS_UNKNOWN_PRAGMAS_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wunknown-pragmas")
 #  pragma clang diagnostic ignored "-Wunknown-pragmas"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wunknown-pragmas")
 #  pragma clang diagnostic ignored "-Wunknown-pragmas"
 # endif

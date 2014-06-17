@@ -17,13 +17,13 @@
 # define LEATHERS_USED_BUT_MARKED_UNUSED_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wused-but-marked-unused")
 #  pragma clang diagnostic ignored "-Wused-but-marked-unused"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wused-but-marked-unused")
 #  pragma clang diagnostic ignored "-Wused-but-marked-unused"
 # endif

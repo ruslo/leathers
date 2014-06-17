@@ -17,14 +17,18 @@
 # define LEATHERS_SIGN_COMPARE_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wsign-compare")
 #  pragma clang diagnostic ignored "-Wsign-compare"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wsign-compare")
 #  pragma clang diagnostic ignored "-Wsign-compare"
 # endif
+#endif
+
+#if (BOOST_COMP_MSVC)
+# pragma warning(disable: 4389)
 #endif

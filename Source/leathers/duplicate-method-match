@@ -17,13 +17,13 @@
 # define LEATHERS_DUPLICATE_METHOD_MATCH_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wduplicate-method-match")
 #  pragma clang diagnostic ignored "-Wduplicate-method-match"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wduplicate-method-match")
 #  pragma clang diagnostic ignored "-Wduplicate-method-match"
 # endif

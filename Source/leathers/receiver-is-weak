@@ -17,13 +17,13 @@
 # define LEATHERS_RECEIVER_IS_WEAK_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wreceiver-is-weak")
 #  pragma clang diagnostic ignored "-Wreceiver-is-weak"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wreceiver-is-weak")
 #  pragma clang diagnostic ignored "-Wreceiver-is-weak"
 # endif

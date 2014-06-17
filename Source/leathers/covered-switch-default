@@ -17,13 +17,13 @@
 # define LEATHERS_COVERED_SWITCH_DEFAULT_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wcovered-switch-default")
 #  pragma clang diagnostic ignored "-Wcovered-switch-default"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wcovered-switch-default")
 #  pragma clang diagnostic ignored "-Wcovered-switch-default"
 # endif

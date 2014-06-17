@@ -17,13 +17,13 @@
 # define LEATHERS_UNUSED_VARIABLE_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wunused-variable")
 #  pragma clang diagnostic ignored "-Wunused-variable"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wunused-variable")
 #  pragma clang diagnostic ignored "-Wunused-variable"
 # endif

@@ -17,13 +17,13 @@
 # define LEATHERS_DEPRECATED_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wdeprecated")
 #  pragma clang diagnostic ignored "-Wdeprecated"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wdeprecated")
 #  pragma clang diagnostic ignored "-Wdeprecated"
 # endif

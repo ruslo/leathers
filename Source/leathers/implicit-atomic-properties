@@ -17,13 +17,13 @@
 # define LEATHERS_IMPLICIT_ATOMIC_PROPERTIES_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wimplicit-atomic-properties")
 #  pragma clang diagnostic ignored "-Wimplicit-atomic-properties"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wimplicit-atomic-properties")
 #  pragma clang diagnostic ignored "-Wimplicit-atomic-properties"
 # endif

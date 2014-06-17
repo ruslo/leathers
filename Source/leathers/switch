@@ -17,14 +17,18 @@
 # define LEATHERS_SWITCH_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wswitch")
 #  pragma clang diagnostic ignored "-Wswitch"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wswitch")
 #  pragma clang diagnostic ignored "-Wswitch"
 # endif
+#endif
+
+#if (BOOST_COMP_MSVC)
+# pragma warning(disable: 4062)
 #endif

@@ -17,13 +17,13 @@
 # define LEATHERS_DISABLED_MACRO_EXPANSION_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wdisabled-macro-expansion")
 #  pragma clang diagnostic ignored "-Wdisabled-macro-expansion"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wdisabled-macro-expansion")
 #  pragma clang diagnostic ignored "-Wdisabled-macro-expansion"
 # endif

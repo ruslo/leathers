@@ -17,13 +17,13 @@
 # define LEATHERS_INVALID_OFFSETOF_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Winvalid-offsetof")
 #  pragma clang diagnostic ignored "-Winvalid-offsetof"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Winvalid-offsetof")
 #  pragma clang diagnostic ignored "-Winvalid-offsetof"
 # endif

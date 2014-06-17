@@ -17,13 +17,13 @@
 # define LEATHERS_OLD_STYLE_CAST_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wold-style-cast")
 #  pragma clang diagnostic ignored "-Wold-style-cast"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wold-style-cast")
 #  pragma clang diagnostic ignored "-Wold-style-cast"
 # endif

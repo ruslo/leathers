@@ -17,13 +17,13 @@
 # define LEATHERS_CXX11_EXTENSIONS_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wc++11-extensions")
 #  pragma clang diagnostic ignored "-Wc++11-extensions"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wc++11-extensions")
 #  pragma clang diagnostic ignored "-Wc++11-extensions"
 # endif

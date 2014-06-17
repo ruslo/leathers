@@ -17,13 +17,13 @@
 # define LEATHERS_NEWLINE_EOF_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wnewline-eof")
 #  pragma clang diagnostic ignored "-Wnewline-eof"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wnewline-eof")
 #  pragma clang diagnostic ignored "-Wnewline-eof"
 # endif

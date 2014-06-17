@@ -17,13 +17,13 @@
 # define LEATHERS_POINTER_SIGN_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wpointer-sign")
 #  pragma clang diagnostic ignored "-Wpointer-sign"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wpointer-sign")
 #  pragma clang diagnostic ignored "-Wpointer-sign"
 # endif

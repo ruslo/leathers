@@ -17,13 +17,13 @@
 # define LEATHERS_DEPRECATED_REGISTER_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wdeprecated-register")
 #  pragma clang diagnostic ignored "-Wdeprecated-register"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wdeprecated-register")
 #  pragma clang diagnostic ignored "-Wdeprecated-register"
 # endif

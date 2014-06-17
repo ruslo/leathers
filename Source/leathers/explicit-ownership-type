@@ -17,13 +17,13 @@
 # define LEATHERS_EXPLICIT_OWNERSHIP_TYPE_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wexplicit-ownership-type")
 #  pragma clang diagnostic ignored "-Wexplicit-ownership-type"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wexplicit-ownership-type")
 #  pragma clang diagnostic ignored "-Wexplicit-ownership-type"
 # endif

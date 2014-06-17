@@ -17,13 +17,13 @@
 # define LEATHERS_CAST_ALIGN_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wcast-align")
 #  pragma clang diagnostic ignored "-Wcast-align"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wcast-align")
 #  pragma clang diagnostic ignored "-Wcast-align"
 # endif

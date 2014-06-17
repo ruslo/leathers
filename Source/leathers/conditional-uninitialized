@@ -17,13 +17,13 @@
 # define LEATHERS_CONDITIONAL_UNINITIALIZED_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wconditional-uninitialized")
 #  pragma clang diagnostic ignored "-Wconditional-uninitialized"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wconditional-uninitialized")
 #  pragma clang diagnostic ignored "-Wconditional-uninitialized"
 # endif

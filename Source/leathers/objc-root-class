@@ -17,13 +17,13 @@
 # define LEATHERS_OBJC_ROOT_CLASS_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wobjc-root-class")
 #  pragma clang diagnostic ignored "-Wobjc-root-class"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wobjc-root-class")
 #  pragma clang diagnostic ignored "-Wobjc-root-class"
 # endif

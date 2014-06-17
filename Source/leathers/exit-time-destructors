@@ -17,13 +17,13 @@
 # define LEATHERS_EXIT_TIME_DESTRUCTORS_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wexit-time-destructors")
 #  pragma clang diagnostic ignored "-Wexit-time-destructors"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wexit-time-destructors")
 #  pragma clang diagnostic ignored "-Wexit-time-destructors"
 # endif

@@ -17,13 +17,13 @@
 # define LEATHERS_MISSING_FIELD_INITIALIZERS_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wmissing-field-initializers")
 #  pragma clang diagnostic ignored "-Wmissing-field-initializers"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wmissing-field-initializers")
 #  pragma clang diagnostic ignored "-Wmissing-field-initializers"
 # endif

@@ -17,13 +17,13 @@
 # define LEATHERS_MISSING_PROTOTYPES_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wmissing-prototypes")
 #  pragma clang diagnostic ignored "-Wmissing-prototypes"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wmissing-prototypes")
 #  pragma clang diagnostic ignored "-Wmissing-prototypes"
 # endif

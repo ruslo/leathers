@@ -17,13 +17,13 @@
 # define LEATHERS_OBJC_MISSING_PROPERTY_SYNTHESIS_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wobjc-missing-property-synthesis")
 #  pragma clang diagnostic ignored "-Wobjc-missing-property-synthesis"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wobjc-missing-property-synthesis")
 #  pragma clang diagnostic ignored "-Wobjc-missing-property-synthesis"
 # endif

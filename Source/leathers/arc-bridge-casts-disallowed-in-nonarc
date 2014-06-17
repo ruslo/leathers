@@ -17,13 +17,13 @@
 # define LEATHERS_ARC_BRIDGE_CASTS_DISALLOWED_IN_NONARC_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Warc-bridge-casts-disallowed-in-nonarc")
 #  pragma clang diagnostic ignored "-Warc-bridge-casts-disallowed-in-nonarc"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Warc-bridge-casts-disallowed-in-nonarc")
 #  pragma clang diagnostic ignored "-Warc-bridge-casts-disallowed-in-nonarc"
 # endif

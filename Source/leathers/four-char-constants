@@ -17,13 +17,13 @@
 # define LEATHERS_FOUR_CHAR_CONSTANTS_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wfour-char-constants")
 #  pragma clang diagnostic ignored "-Wfour-char-constants"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wfour-char-constants")
 #  pragma clang diagnostic ignored "-Wfour-char-constants"
 # endif

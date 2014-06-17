@@ -17,13 +17,13 @@
 # define LEATHERS_UNDECLARED_SELECTOR_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wundeclared-selector")
 #  pragma clang diagnostic ignored "-Wundeclared-selector"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wundeclared-selector")
 #  pragma clang diagnostic ignored "-Wundeclared-selector"
 # endif

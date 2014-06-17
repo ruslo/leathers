@@ -17,13 +17,13 @@
 # define LEATHERS_INT_CONVERSION_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wint-conversion")
 #  pragma clang diagnostic ignored "-Wint-conversion"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wint-conversion")
 #  pragma clang diagnostic ignored "-Wint-conversion"
 # endif

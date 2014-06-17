@@ -17,13 +17,13 @@
 # define LEATHERS_UNUSED_FUNCTION_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wunused-function")
 #  pragma clang diagnostic ignored "-Wunused-function"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wunused-function")
 #  pragma clang diagnostic ignored "-Wunused-function"
 # endif

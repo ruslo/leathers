@@ -17,13 +17,13 @@
 # define LEATHERS_GLOBAL_CONSTRUCTORS_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wglobal-constructors")
 #  pragma clang diagnostic ignored "-Wglobal-constructors"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wglobal-constructors")
 #  pragma clang diagnostic ignored "-Wglobal-constructors"
 # endif

@@ -17,13 +17,13 @@
 # define LEATHERS_EXTRA_SEMI_
 #endif
 
-#if defined(BOOST_COMP_CLANG)
+#if (BOOST_COMP_CLANG)
 # if __has_warning("-Wextra-semi")
 #  pragma clang diagnostic ignored "-Wextra-semi"
 # endif
 #endif
 
-#if defined(BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC)
 # if __has_warning("-Wextra-semi")
 #  pragma clang diagnostic ignored "-Wextra-semi"
 # endif
