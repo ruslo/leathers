@@ -44,7 +44,9 @@ elif args.toolchain == 'vs2013':
 else:
   assert(False)
 
-expected_log = os.path.join(os.getcwd(), 'expected-warnings', expected_log)
+cdir = os.getcwd()
+
+expected_log = os.path.join(cdir, 'expected-warnings', expected_log)
 if not os.path.exists(expected_log):
   sys.exit('Path not found: {}'.format(expected_log))
 
@@ -79,10 +81,19 @@ if toolchain:
   toolchain_path = os.path.join(polly_root, "{}.cmake".format(toolchain))
   toolchain_option = "-DCMAKE_TOOLCHAIN_FILE={}".format(toolchain_path)
 
-build_dir = os.path.join(os.getcwd(), '_builds', 'ForTesting')
+build_dir = os.path.join(cdir, '_builds', 'ForTesting')
 build_dir_option = "-B{}".format(build_dir)
 
 build_type_for_generate_step = "-DCMAKE_BUILD_TYPE={}".format(args.type)
+
+def remove_useless_info(line):
+  line = line.replace("no-such-warning", "")
+  line = line.replace("1 warning generated.", "")
+  line = line.replace("2 warnings generated.", "")
+  line = line.replace("For Visual Studio warning", "") # nice comment :)
+  line = line.replace("to silence this warning", "")
+  line = line.replace(cdir, "")
+  return line
 
 # Expected no warnings
 
@@ -116,8 +127,8 @@ build_log = call(build_command)
 
 build_lines = build_log.split('\n')
 for line in build_lines:
-  line = re.sub('no-such-warning', '', line)
-  if line.find('warning') != -1:
+  line = remove_useless_info(line)
+  if line.find("warning") != -1:
     print("Build generates warning (line: `{}`)".format(line))
     print("Full log:\n{}".format(build_log))
     sys.exit(1)
@@ -158,12 +169,10 @@ result_warnings = ""
 build_lines = build_log.split('\n')
 build_lines.sort()
 
-cdir = os.getcwd()
-
 for line in build_lines:
-  pattern = "{}.*:[0-9]+:[0-9]+: warning:".format(cdir)
-  if re.search(pattern, line):
-    result_warnings += re.sub(cdir, "", line)
+  line = remove_useless_info(line)
+  if line.find("warning") != -1:
+    result_warnings += line
     result_warnings += '\n'
 
 if expected_warnings != result_warnings:
