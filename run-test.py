@@ -37,10 +37,16 @@ elif args.toolchain == 'xcode':
   expected_log = 'xcode.log'
 elif args.toolchain == 'vs2013x64':
   generator = '-GVisual Studio 12 2013 Win64'
-  expected_log = 'vs.log'
+  if args.type == "Debug":
+    expected_log = 'vs-debug.log'
+  else:
+    expected_log = 'vs-release.log'
 elif args.toolchain == 'vs2013':
   generator = '-GVisual Studio 12 2013'
-  expected_log = 'vs.log'
+  if args.type == "Debug":
+    expected_log = 'vs-debug.log'
+  else:
+    expected_log = 'vs-release.log'
 else:
   assert(False)
 
@@ -93,6 +99,7 @@ def remove_useless_info(line):
   line = line.replace("For Visual Studio warning", "") # nice comment :)
   line = line.replace("to silence this warning", "")
   line = line.replace(cdir, "")
+  line = line.replace(cdir.lower(), "") # strange MSVC feature
   return line
 
 # Expected no warnings
