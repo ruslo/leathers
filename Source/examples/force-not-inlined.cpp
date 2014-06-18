@@ -23,6 +23,7 @@
 #include <leathers/undef>
 #include <leathers/unused-parameter>
 #include <leathers/weak-vtables>
+#include <leathers/automatic-inline>
 #if !defined(SHOW_WARNINGS)
 # include <leathers/force-not-inlined>
 #endif

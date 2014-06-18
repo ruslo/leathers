@@ -9,6 +9,9 @@ int main() {
   char y;
 
 #include <leathers/push>
+#if (BOOST_COMP_MSVC)
+# include <leathers/conversion>
+#endif
 #if !defined(SHOW_WARNINGS)
 # include <leathers/conversion-loss>
 #endif
