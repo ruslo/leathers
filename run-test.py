@@ -17,6 +17,7 @@ parser.add_argument(
         'libcxx',
         'xcode',
         'clang_libstdcxx',
+        'gcc',
         'gcc48',
         'vs2013x64',
         'vs2013'
@@ -48,6 +49,9 @@ elif args.toolchain == 'clang_libstdcxx':
 elif args.toolchain == 'gcc48':
   toolchain = 'gcc48'
   expected_log = 'gcc48.log'
+elif args.toolchain == 'gcc':
+  toolchain = 'gcc'
+  expected_log = 'gcc.log'
 elif args.toolchain == 'vs2013x64':
   generator = '-GVisual Studio 12 2013 Win64'
   if args.type == "Debug":

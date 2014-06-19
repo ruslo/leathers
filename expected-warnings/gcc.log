@@ -1,0 +1,8 @@
+/Source/examples/deprecated-declarations.cpp:27:3: warning: 'void foo()' is deprecated (declared at /Source/examples/deprecated-declarations.cpp:18): boo [-Wdeprecated-declarations]
+/Source/examples/deprecated-declarations.cpp:27:7: warning: 'void foo()' is deprecated (declared at /Source/examples/deprecated-declarations.cpp:18): boo [-Wdeprecated-declarations]
+/Source/examples/ill-formed-comma-expr.cpp:11:10: warning: left operand of comma operator has no effect [-Wunused-value]
+/Source/examples/sign-compare.cpp:11:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+/Source/examples/signed-unsigned-compare.cpp:15:12: warning: comparison between signed and unsigned integer expressions [-Wsign-compare]
+/Source/examples/switch.cpp:16:10: warning: enumeration value 'B' not handled in switch [-Wswitch]
+/Source/examples/unused-parameter.cpp:10:6: warning: unused parameter 'a' [-Wunused-parameter]
+/Source/examples/unused-value.cpp:10:4: warning: statement has no effect [-Wunused-value]
