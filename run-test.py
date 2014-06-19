@@ -13,7 +13,12 @@ import sys
 parser = argparse.ArgumentParser(description="Script for library testing")
 parser.add_argument(
     '--toolchain',
-    choices=['libcxx', 'xcode', 'vs2013x64', 'vs2013'],
+    choices=[
+        'libcxx',
+        'xcode',
+        'vs2013x64',
+        'vs2013'
+    ],
     help="CMake generator/toolchain",
 )
 
