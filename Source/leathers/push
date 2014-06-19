@@ -18,7 +18,7 @@
 # pragma clang diagnostic push
 #endif
 
-#if (BOOST_COMP_GNUC)
+#if (BOOST_COMP_GNUC) && !(BOOST_COMP_CLANG)
 # pragma GCC diagnostic push
 #endif
 
