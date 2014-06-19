@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wduplicate-method-match"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wduplicate-method-match")
-#  pragma clang diagnostic ignored "-Wduplicate-method-match"
-# endif
-#endif

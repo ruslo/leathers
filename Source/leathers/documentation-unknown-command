@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wdocumentation-unknown-command"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wdocumentation-unknown-command")
-#  pragma clang diagnostic ignored "-Wdocumentation-unknown-command"
-# endif
-#endif

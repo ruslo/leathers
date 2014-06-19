@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Warc-repeated-use-of-weak"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Warc-repeated-use-of-weak")
-#  pragma clang diagnostic ignored "-Warc-repeated-use-of-weak"
-# endif
-#endif

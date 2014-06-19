@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wdisabled-macro-expansion"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wdisabled-macro-expansion")
-#  pragma clang diagnostic ignored "-Wdisabled-macro-expansion"
-# endif
-#endif

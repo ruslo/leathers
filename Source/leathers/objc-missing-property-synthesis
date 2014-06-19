@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wobjc-missing-property-synthesis"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wobjc-missing-property-synthesis")
-#  pragma clang diagnostic ignored "-Wobjc-missing-property-synthesis"
-# endif
-#endif

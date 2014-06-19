@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wdeprecated-objc-isa-usage"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wdeprecated-objc-isa-usage")
-#  pragma clang diagnostic ignored "-Wdeprecated-objc-isa-usage"
-# endif
-#endif

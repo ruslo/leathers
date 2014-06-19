@@ -23,8 +23,6 @@
 # endif
 #endif
 
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wmissing-prototypes")
-#  pragma clang diagnostic ignored "-Wmissing-prototypes"
-# endif
+#if (BOOST_COMP_GNUC) && !(BOOST_COMP_CLANG)
+# pragma GCC diagnostic ignored "-Wmissing-prototypes"
 #endif

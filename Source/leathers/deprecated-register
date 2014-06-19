@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wdeprecated-register"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wdeprecated-register")
-#  pragma clang diagnostic ignored "-Wdeprecated-register"
-# endif
-#endif

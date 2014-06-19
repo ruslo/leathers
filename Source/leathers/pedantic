@@ -5,24 +5,24 @@
 // All rights reserved.
 
 #if !defined(LEATHERS_PUSH_)
-# error "`leathers/empty-body` used "
+# error "`leathers/pedantic` used "
       "without `leathers/push`, "
       "see README.txt for more info"
 #endif
 
-#if defined(LEATHERS_EMPTY_BODY_)
-# error "`leathers/empty-body` "
+#if defined(LEATHERS_PEDANTIC_)
+# error "`leathers/pedantic` "
     "already included; see README.txt for more info"
 #else
-# define LEATHERS_EMPTY_BODY_
+# define LEATHERS_PEDANTIC_
 #endif
 
 #if (BOOST_COMP_CLANG)
-# if __has_warning("-Wempty-body")
-#  pragma clang diagnostic ignored "-Wempty-body"
+# if __has_warning("-Wpedantic")
+#  pragma clang diagnostic ignored "-Wpedantic"
 # endif
 #endif
 
 #if (BOOST_COMP_GNUC) && !(BOOST_COMP_CLANG)
-# pragma GCC diagnostic ignored "-Wempty-body"
+# pragma GCC diagnostic ignored "-Wpedantic"
 #endif

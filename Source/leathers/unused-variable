@@ -23,8 +23,6 @@
 # endif
 #endif
 
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wunused-variable")
-#  pragma clang diagnostic ignored "-Wunused-variable"
-# endif
+#if (BOOST_COMP_GNUC) && !(BOOST_COMP_CLANG)
+# pragma GCC diagnostic ignored "-Wunused-variable"
 #endif

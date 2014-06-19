@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wweak-vtables"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wweak-vtables")
-#  pragma clang diagnostic ignored "-Wweak-vtables"
-# endif
-#endif

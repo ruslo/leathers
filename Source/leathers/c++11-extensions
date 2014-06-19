@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wc++11-extensions"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wc++11-extensions")
-#  pragma clang diagnostic ignored "-Wc++11-extensions"
-# endif
-#endif

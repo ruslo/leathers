@@ -78,6 +78,7 @@ sugar_files(
     overloaded-virtual
     padded
     parentheses
+    pedantic
     pointer-sign
     return-type
     shadow
@@ -94,7 +95,9 @@ sugar_files(
     uninitialized
     unknown-pragmas
     unreachable-code
+    unreachable-code-return
     unsafe-conversion
+    unused-but-set-variable
     unused-function
     unused-label
     unused-parameter

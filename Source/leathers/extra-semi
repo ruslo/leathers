@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wextra-semi"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wextra-semi")
-#  pragma clang diagnostic ignored "-Wextra-semi"
-# endif
-#endif
