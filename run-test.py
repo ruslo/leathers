@@ -195,6 +195,14 @@ for line in build_lines:
     result_warnings += line
     result_warnings += '\n'
 
+if len(result_warnings) == 0:
+  sys.exit("No warnings detected!")
+
+travis_env = os.getenv("TRAVIS")
+if travis_env:
+  print("Travis detected, skip expected check")
+  sys.exit(0)
+
 if expected_warnings != result_warnings:
   print("Expected:")
   print(expected_warnings)
