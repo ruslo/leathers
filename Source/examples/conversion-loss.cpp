@@ -9,6 +9,7 @@ int main() {
   char y;
 
 #include <leathers/push>
+#include <leathers/unused-but-set-variable>
 #if (BOOST_COMP_MSVC)
 # include <leathers/conversion>
 #endif
@@ -16,5 +17,5 @@ int main() {
 # include <leathers/conversion-loss>
 #endif
   y = foo();
-#include <leathers/pop>
 }
+#include <leathers/pop>

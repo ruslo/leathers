@@ -2,6 +2,7 @@
 // All rights reserved.
 
 #include <leathers/push>
+#include <leathers/unreachable-code-return>
 #if !defined(SHOW_WARNINGS)
 # include <leathers/unreachable-code>
 #endif

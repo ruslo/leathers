@@ -4,6 +4,7 @@
 void foo();
 
 #include <leathers/push>
+#include <leathers/pedantic>
 #if !defined(SHOW_WARNINGS)
 # include <leathers/c++98-compat-pedantic>
 #endif
