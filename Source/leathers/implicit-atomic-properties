@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wimplicit-atomic-properties"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wimplicit-atomic-properties")
-#  pragma clang diagnostic ignored "-Wimplicit-atomic-properties"
-# endif
-#endif

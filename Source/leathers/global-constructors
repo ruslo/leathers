@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wglobal-constructors"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wglobal-constructors")
-#  pragma clang diagnostic ignored "-Wglobal-constructors"
-# endif
-#endif

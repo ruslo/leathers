@@ -24,9 +24,7 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wnon-virtual-dtor")
-#  pragma clang diagnostic ignored "-Wnon-virtual-dtor"
-# endif
+# pragma GCC diagnostic ignored "-Wnon-virtual-dtor"
 #endif
 
 #if (BOOST_COMP_MSVC)

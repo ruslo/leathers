@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wunknown-pragmas")
-#  pragma clang diagnostic ignored "-Wunknown-pragmas"
-# endif
+# pragma GCC diagnostic ignored "-Wunknown-pragmas"
 #endif

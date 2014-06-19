@@ -24,9 +24,7 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wpadded")
-#  pragma clang diagnostic ignored "-Wpadded"
-# endif
+# pragma GCC diagnostic ignored "-Wpadded"
 #endif
 
 #if (BOOST_COMP_MSVC)

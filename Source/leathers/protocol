@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wprotocol")
-#  pragma clang diagnostic ignored "-Wprotocol"
-# endif
+# pragma GCC diagnostic ignored "-Wprotocol"
 #endif

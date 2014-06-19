@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wc++98-compat-pedantic"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wc++98-compat-pedantic")
-#  pragma clang diagnostic ignored "-Wc++98-compat-pedantic"
-# endif
-#endif

@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wpointer-sign")
-#  pragma clang diagnostic ignored "-Wpointer-sign"
-# endif
+# pragma GCC diagnostic ignored "-Wpointer-sign"
 #endif

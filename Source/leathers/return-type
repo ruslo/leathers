@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wreturn-type")
-#  pragma clang diagnostic ignored "-Wreturn-type"
-# endif
+# pragma GCC diagnostic ignored "-Wreturn-type"
 #endif

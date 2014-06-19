@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wempty-body")
-#  pragma clang diagnostic ignored "-Wempty-body"
-# endif
+# pragma GCC diagnostic ignored "-Wempty-body"
 #endif

@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Woverloaded-virtual")
-#  pragma clang diagnostic ignored "-Woverloaded-virtual"
-# endif
+# pragma GCC diagnostic ignored "-Woverloaded-virtual"
 #endif

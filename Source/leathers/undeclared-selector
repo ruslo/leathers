@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wundeclared-selector")
-#  pragma clang diagnostic ignored "-Wundeclared-selector"
-# endif
+# pragma GCC diagnostic ignored "-Wundeclared-selector"
 #endif

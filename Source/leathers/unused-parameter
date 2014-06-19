@@ -24,9 +24,7 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wunused-parameter")
-#  pragma clang diagnostic ignored "-Wunused-parameter"
-# endif
+# pragma GCC diagnostic ignored "-Wunused-parameter"
 #endif
 
 #if (BOOST_COMP_MSVC)

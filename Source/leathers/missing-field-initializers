@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wmissing-field-initializers")
-#  pragma clang diagnostic ignored "-Wmissing-field-initializers"
-# endif
+# pragma GCC diagnostic ignored "-Wmissing-field-initializers"
 #endif

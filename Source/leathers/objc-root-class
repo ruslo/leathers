@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wobjc-root-class"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wobjc-root-class")
-#  pragma clang diagnostic ignored "-Wobjc-root-class"
-# endif
-#endif

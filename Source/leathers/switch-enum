@@ -24,9 +24,7 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wswitch-enum")
-#  pragma clang diagnostic ignored "-Wswitch-enum"
-# endif
+# pragma GCC diagnostic ignored "-Wswitch-enum"
 #endif
 
 #if (BOOST_COMP_MSVC)

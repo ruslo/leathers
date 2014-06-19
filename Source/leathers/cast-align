@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wcast-align")
-#  pragma clang diagnostic ignored "-Wcast-align"
-# endif
+# pragma GCC diagnostic ignored "-Wcast-align"
 #endif

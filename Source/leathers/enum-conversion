@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wenum-conversion"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wenum-conversion")
-#  pragma clang diagnostic ignored "-Wenum-conversion"
-# endif
-#endif

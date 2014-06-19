@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wnewline-eof"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wnewline-eof")
-#  pragma clang diagnostic ignored "-Wnewline-eof"
-# endif
-#endif

@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wparentheses")
-#  pragma clang diagnostic ignored "-Wparentheses"
-# endif
+# pragma GCC diagnostic ignored "-Wparentheses"
 #endif

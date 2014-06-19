@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Warc-bridge-casts-disallowed-in-nonarc"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Warc-bridge-casts-disallowed-in-nonarc")
-#  pragma clang diagnostic ignored "-Warc-bridge-casts-disallowed-in-nonarc"
-# endif
-#endif

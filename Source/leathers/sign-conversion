@@ -24,9 +24,7 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wsign-conversion")
-#  pragma clang diagnostic ignored "-Wsign-conversion"
-# endif
+# pragma GCC diagnostic ignored "-Wsign-conversion"
 #endif
 
 #if (BOOST_COMP_MSVC)

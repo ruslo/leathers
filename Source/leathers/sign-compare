@@ -24,9 +24,7 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wsign-compare")
-#  pragma clang diagnostic ignored "-Wsign-compare"
-# endif
+# pragma GCC diagnostic ignored "-Wsign-compare"
 #endif
 
 #if (BOOST_COMP_MSVC)

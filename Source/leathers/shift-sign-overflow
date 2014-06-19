@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wshift-sign-overflow"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wshift-sign-overflow")
-#  pragma clang diagnostic ignored "-Wshift-sign-overflow"
-# endif
-#endif

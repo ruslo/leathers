@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wreceiver-is-weak"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wreceiver-is-weak")
-#  pragma clang diagnostic ignored "-Wreceiver-is-weak"
-# endif
-#endif

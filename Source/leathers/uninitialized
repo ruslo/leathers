@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wuninitialized")
-#  pragma clang diagnostic ignored "-Wuninitialized"
-# endif
+# pragma GCC diagnostic ignored "-Wuninitialized"
 #endif

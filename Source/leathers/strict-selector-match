@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wstrict-selector-match")
-#  pragma clang diagnostic ignored "-Wstrict-selector-match"
-# endif
+# pragma GCC diagnostic ignored "-Wstrict-selector-match"
 #endif

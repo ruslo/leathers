@@ -24,9 +24,7 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wdeprecated-declarations")
-#  pragma clang diagnostic ignored "-Wdeprecated-declarations"
-# endif
+# pragma GCC diagnostic ignored "-Wdeprecated-declarations"
 #endif
 
 #if (BOOST_COMP_MSVC)

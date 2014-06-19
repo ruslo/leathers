@@ -24,9 +24,7 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wunreachable-code")
-#  pragma clang diagnostic ignored "-Wunreachable-code"
-# endif
+# pragma GCC diagnostic ignored "-Wunreachable-code"
 #endif
 
 #if (BOOST_COMP_MSVC)

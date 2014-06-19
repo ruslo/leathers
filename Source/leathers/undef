@@ -24,9 +24,7 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wundef")
-#  pragma clang diagnostic ignored "-Wundef"
-# endif
+# pragma GCC diagnostic ignored "-Wundef"
 #endif
 
 #if (BOOST_COMP_MSVC)

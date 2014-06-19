@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wfour-char-constants"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wfour-char-constants")
-#  pragma clang diagnostic ignored "-Wfour-char-constants"
-# endif
-#endif

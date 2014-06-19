@@ -22,9 +22,3 @@
 #  pragma clang diagnostic ignored "-Wused-but-marked-unused"
 # endif
 #endif
-
-#if (BOOST_COMP_GNUC)
-# if __has_warning("-Wused-but-marked-unused")
-#  pragma clang diagnostic ignored "-Wused-but-marked-unused"
-# endif
-#endif

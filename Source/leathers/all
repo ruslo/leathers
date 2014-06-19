@@ -62,6 +62,7 @@
 #include <leathers/overloaded-virtual>
 #include <leathers/padded>
 #include <leathers/parentheses>
+#include <leathers/pedantic>
 #include <leathers/pointer-sign>
 #include <leathers/return-type>
 #include <leathers/shadow>
@@ -78,7 +79,9 @@
 #include <leathers/uninitialized>
 #include <leathers/unknown-pragmas>
 #include <leathers/unreachable-code>
+#include <leathers/unreachable-code-return>
 #include <leathers/unsafe-conversion>
+#include <leathers/unused-but-set-variable>
 #include <leathers/unused-function>
 #include <leathers/unused-label>
 #include <leathers/unused-parameter>

@@ -24,7 +24,5 @@
 #endif
 
 #if (BOOST_COMP_GNUC)
-# if __has_warning("-Wmissing-braces")
-#  pragma clang diagnostic ignored "-Wmissing-braces"
-# endif
+# pragma GCC diagnostic ignored "-Wmissing-braces"
 #endif
