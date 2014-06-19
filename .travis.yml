@@ -1,4 +1,4 @@
-# Linux
+# Linux (https://github.com/travis-ci-tester/toolchain-table)
 
 language:
     - python
@@ -13,6 +13,11 @@ env:
     - TOOLCHAIN=gcc48 TYPE=Release
 
 install:
+    # install gcc-4.8 with c++11 support: https://github.com/travis-ci-tester/travis-test-gcc-cxx-11
+    - sudo add-apt-repository ppa:ubuntu-toolchain-r/test -y
+    - sudo apt-get update
+    - sudo apt-get install g++-4.8
+    # -- end
     - sudo apt-get install cmake
     - sudo apt-get install libcurl3-dev
     # install cmake
