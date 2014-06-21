@@ -2,6 +2,7 @@
 // All rights reserved.
 
 #include <leathers/push>
+#include <leathers/padded>
 #if !defined(SHOW_WARNINGS)
 # include <leathers/layout-changed>
 #endif
