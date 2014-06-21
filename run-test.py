@@ -55,15 +55,15 @@ elif args.toolchain == 'gcc':
 elif args.toolchain == 'vs2013x64':
   generator = '-GVisual Studio 12 2013 Win64'
   if args.type == "Debug":
-    expected_log = 'vs-debug.log'
+    expected_log = 'vs64-debug.log'
   else:
-    expected_log = 'vs-release.log'
+    expected_log = 'vs64-release.log'
 elif args.toolchain == 'vs2013':
   generator = '-GVisual Studio 12 2013'
   if args.type == "Debug":
-    expected_log = 'vs-debug.log'
+    expected_log = 'vs32-debug.log'
   else:
-    expected_log = 'vs-release.log'
+    expected_log = 'vs32-release.log'
 else:
   assert(False)
 
