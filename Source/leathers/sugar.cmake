@@ -42,6 +42,7 @@ sugar_files(
     constant-conversion
     conversion
     conversion-loss
+    conversion-sign-extended
     covered-switch-default
     deprecated
     deprecated-declarations

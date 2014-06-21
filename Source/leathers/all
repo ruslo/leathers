@@ -26,6 +26,7 @@
 #include <leathers/constant-conversion>
 #include <leathers/conversion>
 #include <leathers/conversion-loss>
+#include <leathers/conversion-sign-extended>
 #include <leathers/covered-switch-default>
 #include <leathers/deprecated>
 #include <leathers/deprecated-declarations>
