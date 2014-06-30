@@ -81,6 +81,7 @@ sugar_files(
     parentheses
     pedantic
     pointer-sign
+    reserved-user-defined-literal
     return-type
     shadow
     shift-sign-overflow

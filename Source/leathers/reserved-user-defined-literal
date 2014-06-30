@@ -1,0 +1,28 @@
+// This file generated automatically:
+// https://github.com/ruslo/sugar/wiki/Cross-platform-warning-suppression
+
+// Copyright (c) 2014, Ruslan Baratov
+// All rights reserved.
+
+#if !defined(LEATHERS_PUSH_)
+# error "`leathers/reserved-user-defined-literal` used "
+      "without `leathers/push`, "
+      "see README.txt for more info"
+#endif
+
+#if defined(LEATHERS_RESERVED_USER_DEFINED_LITERAL_)
+# error "`leathers/reserved-user-defined-literal` "
+    "already included; see README.txt for more info"
+#else
+# define LEATHERS_RESERVED_USER_DEFINED_LITERAL_
+#endif
+
+#if (BOOST_COMP_CLANG)
+# if __has_warning("-Wreserved-user-defined-literal")
+#  pragma clang diagnostic ignored "-Wreserved-user-defined-literal"
+# endif
+#endif
+
+#if (BOOST_COMP_GNUC) && !(BOOST_COMP_CLANG)
+# pragma GCC diagnostic ignored "-Wliteral-suffix"
+#endif

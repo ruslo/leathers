@@ -56,10 +56,11 @@ sugar_files(
     object-layout-change.cpp
     old-style-cast.cpp
     padded.cpp
+    reserved-user-defined-literal.cpp
     shift-sign-overflow.cpp
     sign-compare.cpp
-    signed-unsigned-compare.cpp
     sign-conversion.cpp
+    signed-unsigned-compare.cpp
     static-ctor-not-thread-safe.cpp
     switch-enum.cpp
     switch.cpp
