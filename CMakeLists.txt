@@ -13,7 +13,7 @@ option(
 )
 
 ### Download dependencies ###
-include(HunterGate.cmake)
+include("cmake/HunterGate.cmake")
 hunter_add_package(Boost)
 hunter_add_package(Sugar)
 
