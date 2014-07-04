@@ -24,7 +24,7 @@ endmacro()
 hunter_minimum_required(
     VERSION "0.4.2"
     URL "https://github.com/ruslo/hunter/archive/v0.4.2.tar.gz"
-    SHA1 "e3f3d7d4f23f2c09a9df47d5ffa41b4fcc691fb3"
+    SHA1 "3a6c66670dc4103ff2567c03d44b2a99e288e3c8"
 )
 # -- end
 
