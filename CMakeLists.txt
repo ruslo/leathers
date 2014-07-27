@@ -12,8 +12,14 @@ option(
     OFF
 )
 
-### Download dependencies ###
+### Hunter snapshot that will be used ###
 include("cmake/HunterGate.cmake")
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.5.11.tar.gz"
+    SHA1 "3fb31d5a5d53fae93792866ef1486f83d15efe88"
+)
+
+### Download dependencies ###
 hunter_add_package(Boost)
 hunter_add_package(Sugar)
 
