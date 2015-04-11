@@ -315,6 +315,12 @@ endfunction()
 # apply all variables easily just by 'include' command
 # (otherwise PARENT_SCOPE magic needed)
 macro(HunterGate)
+  if(HUNTER_GATE_DONE)
+    # variable HUNTER_GATE_DONE set explicitly for external project
+    # (see `hunter_download`)
+    set_property(GLOBAL PROPERTY HUNTER_GATE_DONE YES)
+  endif()
+
   # First HunterGate command will init Hunter, others will be ignored
   get_property(_hunter_gate_done GLOBAL PROPERTY HUNTER_GATE_DONE SET)
 
