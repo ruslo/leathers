@@ -2,6 +2,14 @@
 # All rights reserved.
 
 cmake_minimum_required(VERSION 3.0)
+
+### Hunter snapshot that will be used ###
+include("cmake/HunterGate.cmake")
+HunterGate(
+    URL "https://github.com/ruslo/hunter/archive/v0.8.0.tar.gz"
+    SHA1 "2436e92eb9ef39e9ccd31dc1351648cff2c10b3d"
+)
+
 project(Leathers)
 
 ### Build Options ###
@@ -10,13 +18,6 @@ option(
     LEATHERS_EXAMPLES_SHOW_WARNINGS
     "Disable warning suppression in examples"
     OFF
-)
-
-### Hunter snapshot that will be used ###
-include("cmake/HunterGate.cmake")
-HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.5.11.tar.gz"
-    SHA1 "3fb31d5a5d53fae93792866ef1486f83d15efe88"
 )
 
 ### Download dependencies ###
