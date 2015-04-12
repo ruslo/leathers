@@ -21,7 +21,7 @@ install:
     - sudo apt-get install cmake
     - sudo apt-get install libcurl3-dev
     # install cmake
-    - CMAKE_VERSION="3.0.0-ios-universal"
+    - CMAKE_VERSION="3.2.1-ruslo"
     - wget https://github.com/ruslo/CMake/archive/v${CMAKE_VERSION}.tar.gz
     - openssl sha1 v${CMAKE_VERSION}.tar.gz
     - tar xf v${CMAKE_VERSION}.tar.gz
