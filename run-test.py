@@ -129,6 +129,7 @@ generate_command = [
     build_dir_option,
     '-DLEATHERS_BUILD_EXAMPLES=ON',
     '-DLEATHERS_EXAMPLES_SHOW_WARNINGS=OFF',
+    '-DHUNTER_RUN_INSTALL=ON',
     build_type_for_generate_step
 ]
 
@@ -167,7 +168,6 @@ generate_command = [
     build_dir_option,
     '-DLEATHERS_BUILD_EXAMPLES=ON',
     '-DLEATHERS_EXAMPLES_SHOW_WARNINGS=ON',
-    '-DHUNTER_RUN_INSTALL=ON',
     build_type_for_generate_step
 ]
 
