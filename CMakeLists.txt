@@ -1,4 +1,4 @@
-# Copyright (c) 2014, Ruslan Baratov
+# Copyright (c) 2014-2015, Ruslan Baratov
 # All rights reserved.
 
 cmake_minimum_required(VERSION 3.0)
@@ -10,7 +10,7 @@ HunterGate(
     SHA1 "a9bd96ab113f3af870b13cd05cf4e75b8848cf4a"
 )
 
-project(Leathers)
+project(Leathers VERSION 0.2.0)
 
 ### Build Options ###
 option(LEATHERS_BUILD_EXAMPLES "Build examples" OFF)
@@ -38,17 +38,11 @@ include(sugar_include)
 #    LEATHERS_EXAMPLES_SOURCES
 sugar_include("./Source")
 
+### Global include
+include_directories("Source")
+
 ### Targets ###
 add_library(leathers INTERFACE)
-
-set(INCL_DEST "include")
-
-target_include_directories(
-    leathers
-    INTERFACE
-    "$<BUILD_INTERFACE:${CMAKE_CURRENT_LIST_DIR}/Source>"
-    "$<INSTALL_INTERFACE:${INCL_DEST}>"
-)
 
 target_include_directories(leathers SYSTEM INTERFACE "${Boost_INCLUDE_DIR}")
 
@@ -95,21 +89,42 @@ sugar_groups_generate(
 )
 
 ### Install ###
-set(CONF_DEST "lib/cmake/Leathers")
+set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
+
+set(config_install_dir "lib/cmake/${PROJECT_NAME}")
+set(include_install_dir "include")
+
+set(version_config "${generated_dir}/${PROJECT_NAME}ConfigVersion.cmake")
+set(project_config "${generated_dir}/${PROJECT_NAME}Config.cmake")
+set(targets_export_name "${PROJECT_NAME}Targets")
+set(namespace "${PROJECT_NAME}::")
 
 include(CMakePackageConfigHelpers)
-
-set(leathers_config "${CMAKE_CURRENT_BINARY_DIR}/LeathersConfig.cmake")
-
-configure_package_config_file(
-    "./Source/LeathersConfig.cmake.in"
-    "${leathers_config}"
-    INSTALL_DESTINATION ${CONF_DEST}
-    PATH_VARS CONF_DEST
+write_basic_package_version_file(
+    "${version_config}" COMPATIBILITY SameMajorVersion
 )
 
-# Install targets and configs
-install(FILES "${leathers_config}" DESTINATION ${CONF_DEST})
-install(TARGETS leathers EXPORT LeathersTargets)
-install(FILES ${LEATHERS_SOURCES} DESTINATION ${INCL_DEST}/leathers)
-install(EXPORT LeathersTargets DESTINATION ${CONF_DEST})
+# Note: use 'targets_export_name'
+configure_file("cmake/Config.cmake.in" "${project_config}" @ONLY)
+
+install(
+    TARGETS leathers
+    EXPORT "${targets_export_name}"
+    INCLUDES DESTINATION "${include_install_dir}"
+)
+
+install(
+    DIRECTORY "Source/leathers"
+    DESTINATION "${include_install_dir}"
+)
+
+install(
+    FILES "${project_config}" "${version_config}"
+    DESTINATION "${config_install_dir}"
+)
+
+install(
+    EXPORT "${targets_export_name}"
+    NAMESPACE "${namespace}"
+    DESTINATION "${config_install_dir}"
+)
