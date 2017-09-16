@@ -88,11 +88,12 @@ sugar_groups_generate(
     ${LEATHERS_EXAMPLES_SOURCES} ${LEATHERS_SOURCES} ${SUGAR_SOURCES}
 )
 
-### Install ###
-set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
+# Installation (https://github.com/forexample/package-example) {
 
 set(config_install_dir "lib/cmake/${PROJECT_NAME}")
 set(include_install_dir "include")
+
+set(generated_dir "${CMAKE_CURRENT_BINARY_DIR}/generated")
 
 set(version_config "${generated_dir}/${PROJECT_NAME}ConfigVersion.cmake")
 set(project_config "${generated_dir}/${PROJECT_NAME}Config.cmake")
