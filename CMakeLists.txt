@@ -25,13 +25,8 @@ hunter_add_package(Boost)
 hunter_add_package(sugar)
 
 ### Find dependencies ###
-find_package(Boost REQUIRED)
+find_package(Boost CONFIG REQUIRED)
 find_package(sugar CONFIG REQUIRED)
-
-### - ###
-sugar_include(Source)
-include(sugar_generate_warning_flags)
-include(sugar_groups_generate)
 
 ### Target sources. Init variables: ###
 #    LEATHERS_SOURCES
@@ -44,28 +39,31 @@ include_directories("Source")
 ### Targets ###
 add_library(leathers INTERFACE)
 
-target_include_directories(leathers SYSTEM INTERFACE "${Boost_INCLUDE_DIR}")
-
-if(LEATHERS_EXAMPLES_SHOW_WARNINGS)
-  set(treat_as_error "")
-else()
-  set(treat_as_error ALL)
-endif()
-
-sugar_generate_warning_flags(
-    target_compile_options
-    target_properties
-    DISABLE
-    unreferenced-inline # https://github.com/ruslo/leathers/issues/1
-    name-length-exceeded # https://github.com/ruslo/leathers/issues/2
-    not-inlined # https://github.com/ruslo/leathers/issues/3
-    force-not-inlined # https://github.com/ruslo/leathers/issues/4
-    ENABLE ALL
-    TREAT_AS_ERROR ${treat_as_error}
-    CLEAR_GLOBAL
-)
+target_link_libraries(leathers INTERFACE Boost::boost)
 
 if(LEATHERS_BUILD_EXAMPLES)
+  include(sugar_generate_warning_flags)
+  include(sugar_groups_generate)
+
+  if(LEATHERS_EXAMPLES_SHOW_WARNINGS)
+    set(treat_as_error "")
+  else()
+    set(treat_as_error ALL)
+  endif()
+
+  sugar_generate_warning_flags(
+      target_compile_options
+      target_properties
+      DISABLE
+      unreferenced-inline # https://github.com/ruslo/leathers/issues/1
+      name-length-exceeded # https://github.com/ruslo/leathers/issues/2
+      not-inlined # https://github.com/ruslo/leathers/issues/3
+      force-not-inlined # https://github.com/ruslo/leathers/issues/4
+      ENABLE ALL
+      TREAT_AS_ERROR ${treat_as_error}
+      CLEAR_GLOBAL
+  )
+
   foreach(src ${LEATHERS_EXAMPLES_SOURCES})
     get_filename_component(test_name "${src}" NAME_WE)
     set(sources ${src} ${LEATHERS_SOURCES} ${SUGAR_SOURCES})
@@ -82,11 +80,11 @@ if(LEATHERS_BUILD_EXAMPLES)
     )
     target_link_libraries(example_${test_name} leathers)
   endforeach()
-endif()
 
-sugar_groups_generate(
-    ${LEATHERS_EXAMPLES_SOURCES} ${LEATHERS_SOURCES} ${SUGAR_SOURCES}
-)
+  sugar_groups_generate(
+      ${LEATHERS_EXAMPLES_SOURCES} ${LEATHERS_SOURCES} ${SUGAR_SOURCES}
+  )
+endif()
 
 # Installation (https://github.com/forexample/package-example) {
 
