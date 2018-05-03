@@ -6,8 +6,8 @@ cmake_minimum_required(VERSION 3.0)
 ### Hunter snapshot that will be used ###
 include("cmake/HunterGate.cmake")
 HunterGate(
-    URL "https://github.com/ruslo/hunter/archive/v0.19.102.tar.gz"
-    SHA1 "49a8333d7efc24c531aed97159fe58a68374185f"
+    URL "https://github.com/ruslo/hunter/archive/v0.20.64.tar.gz"
+    SHA1 "7b830dfda7a094b2af15f44b24ebd2489404d880"
 )
 
 project(Leathers VERSION 0.2.0)
@@ -22,16 +22,16 @@ option(
 
 ### Download dependencies ###
 hunter_add_package(Boost)
-hunter_add_package(Sugar)
+hunter_add_package(sugar)
 
 ### Find dependencies ###
 find_package(Boost REQUIRED)
+find_package(sugar CONFIG REQUIRED)
 
 ### - ###
-include("${SUGAR_ROOT}/cmake/Sugar")
+sugar_include(Source)
 include(sugar_generate_warning_flags)
 include(sugar_groups_generate)
-include(sugar_include)
 
 ### Target sources. Init variables: ###
 #    LEATHERS_SOURCES
