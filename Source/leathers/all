@@ -55,6 +55,7 @@
 #include <leathers/missing-noreturn>
 #include <leathers/missing-prototypes>
 #include <leathers/name-length-exceeded>
+#include <leathers/narrowing>
 #include <leathers/newline-eof>
 #include <leathers/no-such-warning>
 #include <leathers/non-virtual-dtor>
